@@ -25,8 +25,6 @@ public class Player : MonoBehaviour
     {
         _score = 0;
         ScoreChanged?.Invoke(_score);
-
-        transform.position = Vector3.zero;
     }
 
     public void Die()

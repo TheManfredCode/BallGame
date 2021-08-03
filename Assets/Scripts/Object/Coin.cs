@@ -11,10 +11,15 @@ public class Coin : MonoBehaviour
         if (other.gameObject.TryGetComponent(out Player player))
         {
             player.TakeScore(_score);
-            gameObject.SetActive(false);
+            Deactivate();
         }
 
         if (other.gameObject.TryGetComponent(out Edge edge))
-            gameObject.SetActive(false);
+            Deactivate();
+    }
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }
